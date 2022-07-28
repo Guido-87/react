@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/peleas",
+      "handler": "peleas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/peleas",
+      "handler": "peleas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/peleas",
+      "handler": "peleas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

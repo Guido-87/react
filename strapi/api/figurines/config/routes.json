@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/figurines",
+      "handler": "figurines.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/figurines/count",
+      "handler": "figurines.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/figurines/:id",
+      "handler": "figurines.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/figurines",
+      "handler": "figurines.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/figurines/:id",
+      "handler": "figurines.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/figurines/:id",
+      "handler": "figurines.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
