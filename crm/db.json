@@ -1,0 +1,28 @@
+{
+  "clientes": [
+    {
+      "nombre": "Regulus de Leo",
+      "empresa": "Caballeros Dorados TLC",
+      "email": "regulus@ss.com",
+      "telefono": "",
+      "notas": "El mejor caballero dorado",
+      "id": 1
+    },
+    {
+      "nombre": "Ikki de Fénix",
+      "empresa": "Caballeros de Bronce",
+      "email": "ikki@ss.com",
+      "telefono": "",
+      "notas": "",
+      "id": 2
+    },
+    {
+      "nombre": "Radamanthys Wyvern",
+      "empresa": "Espectros de Hades",
+      "email": "radamanthys@ss.com",
+      "telefono": "",
+      "notas": "Tremendo malo en TLC",
+      "id": 4
+    }
+  ]
+}
