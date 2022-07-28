@@ -1,0 +1,14 @@
+{
+  "productos": [
+    {
+      "nombre": "Regulus de Leo",
+      "precio": 38000,
+      "id": 1
+    },
+    {
+      "nombre": "Kanon de Géminis",
+      "precio": 30000,
+      "id": 2
+    }
+  ]
+}
