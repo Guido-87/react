@@ -20,7 +20,8 @@ const CaballeroCard: React.FC<CaballeroCardProps> = ({ caballero, onEdit, onDele
       <Card
         sx={{
           height: 'auto',
-          width: '250px',
+          width: '100%', // Ocupa el ancho completo del contenedor
+          maxWidth: '250px', // Limita el ancho máximo
           display: 'flex',
           flexDirection: 'column',
           border: `2px solid ${getRangoColor(caballero.rango)}`,
@@ -48,11 +49,11 @@ const CaballeroCard: React.FC<CaballeroCardProps> = ({ caballero, onEdit, onDele
               src={caballero.foto}
               alt={caballero.nombre}
               sx={{
-                width: '200px !important', // Fuerza el ancho de la tarjeta
-                height: '100px !important', // Fuerza la altura de la imagen
-                objectFit: 'cover',
-                mt: 2,
-                borderRadius: 1,
+                width: '100%', // Ocupa el ancho completo del contenedor
+                height: '150px', // Altura fija para mantener consistencia
+                objectFit: 'cover', // Ajusta la imagen sin distorsión
+                mt: 1,
+                borderRadius: 2,
               }}
             />
           )}
