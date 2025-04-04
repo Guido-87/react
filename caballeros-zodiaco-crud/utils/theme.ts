@@ -2,20 +2,20 @@ import { createTheme } from '@mui/material/styles';
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark', // Activa el tema oscuro
+    mode: 'dark',
     primary: {
-      main: '#90caf9', // Color principal
+      main: '#90caf9',
     },
     secondary: {
-      main: '#f48fb1', // Color secundario
+      main: '#f48fb1',
     },
     background: {
-      default: '#121212', // Fondo principal
-      paper: '#1e1e1e', // Fondo de tarjetas y elementos
+      default: '#121212',
+      paper: '#1e1e1e',
     },
     text: {
-      primary: '#ffffff', // Texto principal
-      secondary: '#b0bec5', // Texto secundario
+      primary: '#ffffff',
+      secondary: '#b0bec5',
     },
   },
 });

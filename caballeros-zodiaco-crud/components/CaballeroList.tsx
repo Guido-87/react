@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import {
-  Card, CardContent, CardActions, Typography,
   TextField, Button, Grid, Dialog, DialogTitle,
   DialogContent, DialogActions, Checkbox,
   FormControlLabel, DialogContentText, Snackbar,
   Alert, Slide, AlertTitle, Box
 } from '@mui/material';
 import { CheckCircle, Error as ErrorIcon, Info, Warning } from '@mui/icons-material';
+import CaballeroCard from './CaballeroCard';
 
 function SlideTransition(props: any) {
   return <Slide {...props} direction="down" />;
@@ -174,24 +174,14 @@ export default function CaballeroList({ caballeros, onUpdate, onDelete }: any) {
     <Box>
       <TextField label="Filtrar" value={filtro} onChange={(e) => setFiltro(e.target.value)} fullWidth sx={{ mb: 3 }} />
       <Button variant="contained" color="secondary" onClick={simulacionPelea} sx={{ mb: 2 }}>Simular Pelea</Button>
-      <Grid container spacing={2}>
+      <Grid container spacing={3} justifyContent="center">
         {filtrados.map((c: any, i: number) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" gutterBottom>{c.nombre}</Typography>
-                <Typography variant="body2">Constelación: {c.constelacion}</Typography>
-                <Typography variant="body2">Rango: {c.rango}</Typography>
-                <Typography variant="body2">Cosmos: {c.cosmos}</Typography>
-                <Typography variant="body2">Séptimo Sentido: {c.septimoSentido ? 'Sí' : 'No'}</Typography>
-                <Typography variant="body2">Técnicas: {c.tecnicas.join(', ')}</Typography>
-                {c.foto && <Box component="img" src={c.foto} alt={c.nombre} sx={{ width: '100%', height: 150, objectFit: 'cover', mt: 2, borderRadius: 1 }} />}
-              </CardContent>
-              <CardActions>
-                <Button size="small" onClick={() => handleOpen(i)}>Editar</Button>
-                <Button size="small" color="error" onClick={() => handleConfirmDelete(i)}>Eliminar</Button>
-              </CardActions>
-            </Card>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+            <CaballeroCard
+              caballero={c}
+              onEdit={() => handleOpen(i)}
+              onDelete={() => handleConfirmDelete(i)}
+            />
           </Grid>
         ))}
       </Grid>

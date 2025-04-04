@@ -59,7 +59,7 @@ export default function CaballeroForm({ onSave, onClose, caballero }: any) {
   };
 
   return (
-    <Dialog open={true} onClose={onClose} fullWidth>
+    <Dialog open={true} onClose={onClose} fullWidth maxWidth="sm">
       <DialogTitle>{caballero ? 'Editar Caballero' : 'Agregar Caballero'}</DialogTitle>
       <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <TextField label="Nombre" name="nombre" fullWidth value={form.nombre} onChange={handleChange} required />
@@ -72,7 +72,7 @@ export default function CaballeroForm({ onSave, onClose, caballero }: any) {
         {form.foto && <Box component="img" src={form.foto} alt="preview" sx={{ width: '100%', height: 150, objectFit: 'cover', mt: 1, borderRadius: 1 }} />}
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => onClose()} variant="outlined" color="secondary">
+        <Button onClick={onClose} color="secondary">
           Cancelar
         </Button>
         <Button onClick={handleSubmit} variant="contained" color="primary">Guardar</Button>
